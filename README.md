@@ -1,4 +1,4 @@
-instagram-node
+instagram-nodejs-api
 ==============
 
 NodeJS driver for the Instagram API.
