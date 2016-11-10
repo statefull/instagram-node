@@ -1,20 +1,29 @@
 {
   "name": "instagramapi",
-  "version": "0.5.8",
+  "version": "1.0.0",
   "description": "Simple Instagram driver for Node.js",
-  "keywords": ["instagram", "node", "ig", "driver"],
+  "keywords": [
+    "instagram",
+    "node",
+    "ig",
+    "driver"
+  ],
   "homepage": "https://github.com/teleportd/instagram-nodejs-api",
-  "author": { "name": "Fernando Bernal",
-              "email": "statefull@gmail.com",
-              "url": "https://github.com/n1t0" },
-  "repository" :    { "type" :  "git",
-                      "url" :   "https://github.com/teleportd/instagram-nodejs-api.git" },
+  "author": {
+    "name": "Fernando Bernal",
+    "email": "statefull@gmail.com",
+    "url": "https://github.com/n1t0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teleportd/instagram-nodejs-api.git"
+  },
   "dependencies": {
     "fwk": "1.0.x",
     "colors": "0.6.0-1"
   },
-  "main" : "./lib/instagram",
-  "engines" : {
-    "node" : ">=v0.6.0"
+  "main": "./lib/instagram",
+  "engines": {
+    "node": ">=v0.6.0"
   }
 }
