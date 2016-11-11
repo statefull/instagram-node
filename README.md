@@ -1,11 +1,11 @@
-instagram-nodejs-api
+instagramAPI
 ==============
 
 NodeJS driver for the Instagram API.
 
 ## Installation
 
-`npm install instagram-nodejs-api`
+`npm install instagramapi`
 
 ## How it works
 
