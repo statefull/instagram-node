@@ -8,7 +8,7 @@
     "ig",
     "driver"
   ],
-  "homepage": "https://github.com/teleportd/instagram-nodejs-api",
+  "homepage": "https://github.com/statefull/instagramapi",
   "author": {
     "name": "Fernando Bernal",
     "email": "statefull@gmail.com",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/teleportd/instagram-nodejs-api.git"
+    "url": "https://github.com/statefull/instagramapi"
   },
   "dependencies": {
     "fwk": "1.0.x",
