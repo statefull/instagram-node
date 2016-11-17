@@ -63,128 +63,236 @@ exports.handleauth = function(req, res) {
       //   console.log(result);
       // });
 
-      var userSelfLiked = api.user_self_liked({count:1}, params);
+      // var userSelfLiked = api.user_self_liked({count:1}, params);
+      //
+      // userSelfLiked.then(function apiUserSelfLikedResponse(result) {
+      //   console.log(result);
+      // }, function apiUserSelfLikedFail(result) {
+      //   console.log(result);
+      // });
 
-      userSelfLiked.then(function apiUserSelfLikedResponse(result) {
+
+      // var userSearch = api.user_search('gym', {count:10}, params);
+      //
+      // userSearch.then(function apiUserSearchResponse(result) {
+      //   console.log(result);
+      // }, function apiUserSearchFail(result) {
+      //   console.log(result);
+      // });
+
+      // var userFollows = api.user_follows(params);
+      //
+      // userFollows.then(function apiUserFollowsResponse(result) {
+      //   console.log(result);
+      // }, function apiUserFollowsFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var userFollowers =  api.user_followers(params);
+      //
+      // userFollowers.then(function apiUserFollowersResponse(result) {
+      //   console.log(result);
+      // }, function apiUserFollowersFail(result) {
+      //   console.log(result);
+      // });
+
+      // var userSelfRequestBy = api.user_self_requested_by(params);
+      //
+      // userSelfRequestBy.then(function apiUserSelfRequestByResponse(result) {
+      //   console.log(result);
+      // }, function apiUserSelfRequestByFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.user_relationship(result.user.id, params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.set_user_relationship(result.user.id, 'follow', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.media('1380725277503741887_414187957', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.media_search(48.4335645654, 2.345645645, 2000, params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.media_shortcode('BMpUlMSA1-_', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.comments('1380725277503741887_414187957', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.add_comment('1380725277503741887_414187957', 'ajajaajaj nice!!!!', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.del_comment('1380725277503741887_414187957', '1', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.add_like('1380725277503741887_414187957', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.likes('1380725277503741887_414187957', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.del_like('1380725277503741887_414187957', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      // var promise = api.tag('gym', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.tag_media_recent('gym', {count: 10}, params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.tag_search('gym', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      var promise = api.location('1020188658', params);
+
+      promise.then(function apiPromiseResponse(result) {
         console.log(result);
-      }, function apiUserSelfLikedFail(result) {
+      }, function apiPromiseFail(result) {
         console.log(result);
       });
 
+      /* OPTIONS: { [min_id], [max_id], [min_timestamp], [max_timestamp] }; */
+      var promise = api.location_media_recent('1020188658', {}, params);
 
-      // api.user_search('gym', {count:10}, params, function(err, users, remaining, limit) {
-      //   console.log('user_search',JSON.stringify(users));
-      // });
+      promise.then(function apiPromiseResponse(result) {
+        console.log(result);
+      }, function apiPromiseFail(result) {
+        console.log(result);
+      });
 
-      // api.user_follows(params, function(err, result, pagination, remaining, limit) {
-      //     console.log("user_follows",JSON.stringify(result));
-      // });
-      //
-      // api.user_followers(params, function(err, users, pagination, remaining, limit) {
-      //   console.log("user_followers",JSON.stringify(users));
-      // });
-      //
-      // api.user_self_requested_by(params,function(err, users, remaining, limit) {
-      //   console.log("user_self_requested_by",JSON.stringify(users));
-      // });
-      //
-      // api.user_relationship(result.user.id, params, function(err, result, remaining, limit) {
-      //   console.log("user_relationship", JSON.stringify(result));
-      // });
-      //
-      // api.set_user_relationship(result.user.id, 'follow', params, function(err, result, remaining, limit) {
-      //   console.log("set_user_relationship", JSON.stringify(result));
-      // });
+      /* SPECS: { lat, lng, facebook_places_id }; */
+      /* OPTIONS: { [distance] }; */
+      var promise = api.location_search({ lat: 37.9836749, lng: -1.1257176 }, {distance: 500}, params);
 
-      // api.media('1380725277503741887_414187957', params, function(err, media, remaining, limit) {
-      //     console.log("media", JSON.stringify(media));
-      // });
+      promise.then(function apiPromiseResponse(result) {
+        console.log(result);
+      }, function apiPromiseFail(result) {
+        console.log(result);
+      });
+      
+      // var promise = api.del_subscription({id:1});
       //
-      // api.media_search(48.4335645654, 2.345645645, 2, params, function(err, medias, remaining, limit) {
-      //   console.log("media_search", JSON.stringify(medias));
-      // });
-      //
-      // api.media_shortcode('BMpUlMSA1-_', params, function(err, medias, remaining, limit) {
-      //   console.log("media_shortcode", JSON.stringify(medias));
-      // });
-
-      // api.comments('1380725277503741887_414187957', params, function(err, result, remaining, limit) {
-      //   console.log('comments', JSON.stringify(result));
-      // });
-      //
-      // api.add_comment('1380725277503741887_414187957', 'ajajaajaj nice!!!!', params, function(err, result, remaining, limit) {
-      //   console.log('add_comment', JSON.stringify(result));
-      // });
-      //
-      // api.del_comment('1380725277503741887_414187957', '1', params, function(err, remaining, limit) {
-      //      console.log('del_comment', JSON.stringify(err));
-      // });
-
-      // api.add_like('1380725277503741887_414187957', params, function(err, remaining, limit) {
-      //   console.log('add_like', JSON.stringify(err));
-      // });
-      //
-      // api.likes('1380725277503741887_414187957', params, function(err, result, remaining, limit) {
-      //   console.log('likes', JSON.stringify(result));
-      // });
-      //
-      // api.del_like('1380725277503741887_414187957', params, function(err, remaining, limit) {
-      //   console.log('del_like', JSON.stringify(err));
-      // });
-
-      // api.tag('gym', params, function(err, result, remaining, limit) {
-      //     console.log('tag', JSON.stringify(result));
-      // });
-      //
-      // api.tag_media_recent('gym', {count: 10}, params, function(err, medias, pagination, remaining, limit) {
-      //   console.log('tag_media_recent', JSON.stringify(medias));
-      // });
-      //
-      // api.tag_search('gym', params, function(err, result, remaining, limit) {
-      //   console.log('tag_search', JSON.stringify(result));
-      // });
-
-      // api.location('1020188658', params, function(err, result, remaining, limit) {
-      //   console.log('location', JSON.stringify(result));
-      // });
-      //
-      // /* OPTIONS: { [min_id], [max_id], [min_timestamp], [max_timestamp] }; */
-      // api.location_media_recent('1020188658', {}, params, function(err, result, pagination, remaining, limit) {
-      //   console.log('location_media_recent', JSON.stringify(result));
-      // });
-      //
-      // /* SPECS: { lat, lng, facebook_places_id }; */
-      // /* OPTIONS: { [distance] }; */
-      // api.location_search({ lat: 37.9836749, lng: -1.1257176 }, {distance: 500}, params, function(err, result, remaining, limit) {
-      //   console.log('location_search', JSON.stringify(result));
-      // });
-
-      // api.del_subscription({id:1}, function(err,subscriptions,limit){
-      //   console.log('del_subscription', JSON.stringify(subscriptions));
-      // })
-      //
-      // /* OPTIONS: { [verify_token] } */
-      // api.add_tag_subscription('gym', 'http://shop.oik.es/ig/tags', {verify_token: 'jarderOreNow'}, function(err, result, remaining, limit){
-      //   console.log('add_tag_subscription', JSON.stringify(err));
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
       // });
       //
       // /* OPTIONS: { [verify_token] } */
-      // api.add_user_subscription('http://shop.oik.es/ig/user', {verify_token: 'jarderOreNow'}, function(err, result, remaining, limit){
-      //   console.log('add_user_subscription', JSON.stringify(err));
+      // var promise = api.add_tag_subscription('gym', 'http://shop.oik.es/ig/tags', {verify_token: 'jarderOreNow'});
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
       // });
       //
       // /* OPTIONS: { [verify_token] } */
-      // api.add_geography_subscription(48.565464564, 2.34656589, 100, 'http://oik.es/ig/geo', {verify_token: 'jarderOreNow'}, function(err, result, remaining, limit){
-      //   console.log('add_geography_subscription', JSON.stringify(err));
+      // var promise = api.add_user_subscription('http://shop.oik.es/ig/user', {verify_token: 'jarderOreNow'});
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
       // });
       //
       // /* OPTIONS: { [verify_token] } */
-      // api.add_location_subscription(1257285, 'http://shop.oik.es/ig/loc', {verify_token: 'jarderOreNow'}, function(err, result, remaining, limit){
-      //   console.log('add_location_subscription', JSON.stringify(err));
+      // var promise = api.add_geography_subscription(48.565464564, 2.34656589, 100, 'http://oik.es/ig/geo', {verify_token: 'jarderOreNow'});
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
       // });
       //
-      // api.subscriptions(function(err, result, remaining, limit){
-      //   console.log('subscriptions', JSON.stringify(result));
+      // /* OPTIONS: { [verify_token] } */
+      // var promise = api.add_location_subscription(1257285, 'http://shop.oik.es/ig/loc', {verify_token: 'jarderOreNow'});
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // var promise = api.subscriptions();
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
       // });
 
       res.status(200).send(JSON.stringify(result));
