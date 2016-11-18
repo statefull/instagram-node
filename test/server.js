@@ -216,7 +216,34 @@ exports.handleauth = function(req, res) {
       //   console.log(result);
       // });
 
-      var promise = api.location('1020188658', params);
+      // var promise = api.location('1020188658', params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // /* OPTIONS: { [min_id], [max_id], [min_timestamp], [max_timestamp] }; */
+      // var promise = api.location_media_recent('1020188658', {}, params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+      //
+      // /* SPECS: { lat, lng, facebook_places_id }; */
+      // /* OPTIONS: { [distance] }; */
+      // var promise = api.location_search({ lat: 37.9836749, lng: -1.1257176 }, {distance: 500}, params);
+      //
+      // promise.then(function apiPromiseResponse(result) {
+      //   console.log(result);
+      // }, function apiPromiseFail(result) {
+      //   console.log(result);
+      // });
+
+      var promise = api.del_subscription({id:1});
 
       promise.then(function apiPromiseResponse(result) {
         console.log(result);
@@ -224,8 +251,8 @@ exports.handleauth = function(req, res) {
         console.log(result);
       });
 
-      /* OPTIONS: { [min_id], [max_id], [min_timestamp], [max_timestamp] }; */
-      var promise = api.location_media_recent('1020188658', {}, params);
+      /* OPTIONS: { [verify_token] } */
+      var promise = api.add_tag_subscription('gym', 'http://shop.oik.es/ig/tags', {verify_token: 'jarderOreNow'});
 
       promise.then(function apiPromiseResponse(result) {
         console.log(result);
@@ -233,67 +260,40 @@ exports.handleauth = function(req, res) {
         console.log(result);
       });
 
-      /* SPECS: { lat, lng, facebook_places_id }; */
-      /* OPTIONS: { [distance] }; */
-      var promise = api.location_search({ lat: 37.9836749, lng: -1.1257176 }, {distance: 500}, params);
+      /* OPTIONS: { [verify_token] } */
+      var promise = api.add_user_subscription('http://shop.oik.es/ig/user', {verify_token: 'jarderOreNow'});
 
       promise.then(function apiPromiseResponse(result) {
         console.log(result);
       }, function apiPromiseFail(result) {
         console.log(result);
       });
-      
-      // var promise = api.del_subscription({id:1});
-      //
-      // promise.then(function apiPromiseResponse(result) {
-      //   console.log(result);
-      // }, function apiPromiseFail(result) {
-      //   console.log(result);
-      // });
-      //
-      // /* OPTIONS: { [verify_token] } */
-      // var promise = api.add_tag_subscription('gym', 'http://shop.oik.es/ig/tags', {verify_token: 'jarderOreNow'});
-      //
-      // promise.then(function apiPromiseResponse(result) {
-      //   console.log(result);
-      // }, function apiPromiseFail(result) {
-      //   console.log(result);
-      // });
-      //
-      // /* OPTIONS: { [verify_token] } */
-      // var promise = api.add_user_subscription('http://shop.oik.es/ig/user', {verify_token: 'jarderOreNow'});
-      //
-      // promise.then(function apiPromiseResponse(result) {
-      //   console.log(result);
-      // }, function apiPromiseFail(result) {
-      //   console.log(result);
-      // });
-      //
-      // /* OPTIONS: { [verify_token] } */
-      // var promise = api.add_geography_subscription(48.565464564, 2.34656589, 100, 'http://oik.es/ig/geo', {verify_token: 'jarderOreNow'});
-      //
-      // promise.then(function apiPromiseResponse(result) {
-      //   console.log(result);
-      // }, function apiPromiseFail(result) {
-      //   console.log(result);
-      // });
-      //
-      // /* OPTIONS: { [verify_token] } */
-      // var promise = api.add_location_subscription(1257285, 'http://shop.oik.es/ig/loc', {verify_token: 'jarderOreNow'});
-      //
-      // promise.then(function apiPromiseResponse(result) {
-      //   console.log(result);
-      // }, function apiPromiseFail(result) {
-      //   console.log(result);
-      // });
-      //
-      // var promise = api.subscriptions();
-      //
-      // promise.then(function apiPromiseResponse(result) {
-      //   console.log(result);
-      // }, function apiPromiseFail(result) {
-      //   console.log(result);
-      // });
+
+      /* OPTIONS: { [verify_token] } */
+      var promise = api.add_geography_subscription(48.565464564, 2.34656589, 100, 'http://oik.es/ig/geo', {verify_token: 'jarderOreNow'});
+
+      promise.then(function apiPromiseResponse(result) {
+        console.log(result);
+      }, function apiPromiseFail(result) {
+        console.log(result);
+      });
+
+      /* OPTIONS: { [verify_token] } */
+      var promise = api.add_location_subscription(1257285, 'http://shop.oik.es/ig/loc', {verify_token: 'jarderOreNow'});
+
+      promise.then(function apiPromiseResponse(result) {
+        console.log(result);
+      }, function apiPromiseFail(result) {
+        console.log(result);
+      });
+
+      var promise = api.subscriptions();
+
+      promise.then(function apiPromiseResponse(result) {
+        console.log(result);
+      }, function apiPromiseFail(result) {
+        console.log(result);
+      });
 
       res.status(200).send(JSON.stringify(result));
 
